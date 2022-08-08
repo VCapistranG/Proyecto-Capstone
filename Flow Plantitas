@@ -1,0 +1,603 @@
+[
+    {
+        "id": "cdb96b4aab81ba84",
+        "type": "tab",
+        "label": "Proyecto Plantita",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ccc476a129989abd",
+        "type": "ui_webcam",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "group": "963b20e5a1ebec9d",
+        "order": 2,
+        "width": 0,
+        "height": 5,
+        "countdown": false,
+        "autoStart": true,
+        "hideCaptureButton": false,
+        "showImage": "2",
+        "mirror": false,
+        "format": "png",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "cb750590784fb4a0",
+                "2adf6f0d97b28972",
+                "a0919c3629c1dce7",
+                "d9b361c63669f5ed",
+                "139a9d573936daa3"
+            ]
+        ]
+    },
+    {
+        "id": "cb750590784fb4a0",
+        "type": "image viewer",
+        "z": "cdb96b4aab81ba84",
+        "name": "Imagen Original",
+        "width": "500",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 1360,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2adf6f0d97b28972",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "invert",
+        "selectedJimpFunction": {
+            "name": "invert",
+            "fn": "invert",
+            "description": "invert the image colours",
+            "parameters": []
+        },
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "18773e0730770b69",
+                "bf7f1a739441894f",
+                "a44864027cb9b768"
+            ]
+        ]
+    },
+    {
+        "id": "18773e0730770b69",
+        "type": "image viewer",
+        "z": "cdb96b4aab81ba84",
+        "name": "Inversión de Color",
+        "width": "500",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 730,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0919c3629c1dce7",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "[[-2, -1, 0], [-1, 1, 1], [0, 1, 2]]",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "greyscale",
+        "selectedJimpFunction": {
+            "name": "greyscale",
+            "fn": "greyscale",
+            "description": "remove colour from the image",
+            "parameters": []
+        },
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "6f334e4b480908f3",
+                "a02713ed55888ba8"
+            ]
+        ]
+    },
+    {
+        "id": "a44864027cb9b768",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "greyscale",
+        "selectedJimpFunction": {
+            "name": "greyscale",
+            "fn": "greyscale",
+            "description": "remove colour from the image",
+            "parameters": []
+        },
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "e7fa7b2cb3d14995",
+                "6527216e4e3e3db5"
+            ]
+        ]
+    },
+    {
+        "id": "e7fa7b2cb3d14995",
+        "type": "image viewer",
+        "z": "cdb96b4aab81ba84",
+        "name": "Escala ded Grises - Inversión de color",
+        "width": "500",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 1410,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f334e4b480908f3",
+        "type": "image viewer",
+        "z": "cdb96b4aab81ba84",
+        "name": "EScala de Grises",
+        "width": "500",
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 150,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9b361c63669f5ed",
+        "type": "debug",
+        "z": "cdb96b4aab81ba84",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "139a9d573936daa3",
+        "type": "change",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "'/tmp/webcam_'& $moment().format('YYYY-MM-DD-hhmmss') & '.jpeg'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 40,
+        "wires": [
+            [
+                "9016a6553ef425fc"
+            ]
+        ]
+    },
+    {
+        "id": "9016a6553ef425fc",
+        "type": "file",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 720,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9d006d9d461fed7",
+        "type": "debug",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "60cfb5899c5a67a6",
+        "type": "template",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"300px\" height=\"300px\" src=\"{{{payload}}}\">",
+        "output": "str",
+        "x": 280,
+        "y": 540,
+        "wires": [
+            [
+                "9ffecdf983d4f6b5"
+            ]
+        ]
+    },
+    {
+        "id": "9ffecdf983d4f6b5",
+        "type": "ui_template",
+        "z": "cdb96b4aab81ba84",
+        "group": "963b20e5a1ebec9d",
+        "name": "ui template",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a02713ed55888ba8",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "Imagen",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "b64",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "d9d006d9d461fed7",
+                "60cfb5899c5a67a6"
+            ]
+        ]
+    },
+    {
+        "id": "1931adf99163a488",
+        "type": "debug",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "7aa8790f98f8dceb",
+        "type": "template",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"300px\" height=\"300px\" src=\"{{{payload}}}\">",
+        "output": "str",
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "ec9ced665d02dca9"
+            ]
+        ]
+    },
+    {
+        "id": "ec9ced665d02dca9",
+        "type": "ui_template",
+        "z": "cdb96b4aab81ba84",
+        "group": "963b20e5a1ebec9d",
+        "name": "ui template",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1030,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf7f1a739441894f",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "Imagen",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "b64",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "1931adf99163a488",
+                "7aa8790f98f8dceb"
+            ]
+        ]
+    },
+    {
+        "id": "a7aeda8ab86cc8b5",
+        "type": "debug",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "af741dec1cadecd3",
+        "type": "template",
+        "z": "cdb96b4aab81ba84",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"300px\" height=\"300px\" src=\"{{{payload}}}\">",
+        "output": "str",
+        "x": 1450,
+        "y": 560,
+        "wires": [
+            [
+                "91835e131c5e69ac"
+            ]
+        ]
+    },
+    {
+        "id": "91835e131c5e69ac",
+        "type": "ui_template",
+        "z": "cdb96b4aab81ba84",
+        "group": "963b20e5a1ebec9d",
+        "name": "ui template",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1610,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6527216e4e3e3db5",
+        "type": "jimp-image",
+        "z": "cdb96b4aab81ba84",
+        "name": "Imagen",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "b64",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1270,
+        "y": 540,
+        "wires": [
+            [
+                "a7aeda8ab86cc8b5",
+                "af741dec1cadecd3"
+            ]
+        ]
+    },
+    {
+        "id": "963b20e5a1ebec9d",
+        "type": "ui_group",
+        "name": "Captura Parcelas",
+        "tab": "f4db6d5def7334ca",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f4db6d5def7334ca",
+        "type": "ui_tab",
+        "name": "Fotografías Sembradios",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
